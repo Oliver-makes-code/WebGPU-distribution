@@ -46,12 +46,8 @@ set(URL_COMPILER)
 if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
 
 	set(URL_OS "windows")
-
-	if (MSVC)
-		set(URL_COMPILER "msvc")
-	else()
-		set(URL_COMPILER "gnu")
-	endif()
+ 
+	set(URL_COMPILER "msvc")
 
 elseif (CMAKE_SYSTEM_NAME STREQUAL "Linux")
 
