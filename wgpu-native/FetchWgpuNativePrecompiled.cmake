@@ -129,14 +129,9 @@ target_include_directories(webgpu INTERFACE
 if (USE_SHARED_LIB)
 
 	if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
-
-		if (MSVC)
-			set(STATIC_LIB_EXT "lib")
-			set(STATIC_LIB_PREFIX "")
-		else()
-			set(STATIC_LIB_EXT "a")
-			set(STATIC_LIB_PREFIX "lib")
-		endif()
+		
+		set(STATIC_LIB_EXT "lib")
+		set(STATIC_LIB_PREFIX "")
 
 		set(WGPU_IMPLIB "${ZIP_DIR}/lib/${STATIC_LIB_PREFIX}${BINARY_FILENAME}.${STATIC_LIB_EXT}")
 		set_target_properties(
