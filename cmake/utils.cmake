@@ -54,12 +54,7 @@ function(build_lib_filename OUT_VAR LIB_NAME USE_SHARED_LIB)
 	if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
 
 		set(SHARED_LIB_EXT "dll")
-		if (MSVC)
-			set(STATIC_LIB_EXT "lib")
-		else()
-			set(STATIC_LIB_EXT "a")
-			set(STATIC_LIB_PREFIX "lib")
-		endif()
+		set(STATIC_LIB_EXT "lib")
 
 	elseif (CMAKE_SYSTEM_NAME STREQUAL "Linux")
 
